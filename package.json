@@ -1,0 +1,44 @@
+{
+  "name": "rollup-plugin-module-fallback",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A rollup/vite plugin that allows to define a module fallback.",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rollup-plugin",
+    "vite-plugin",
+    "vite",
+    "module",
+    "import",
+    "fallback",
+    "optimized import",
+    "typescript"
+  ],
+  "author": "Daniel Kemna <danielkemna@t-online.de>",
+  "main": "./dist/rollup-plugin-module-fallback.umd.cjs",
+  "module": "./dist/rollup-plugin-module-fallback.js",
+  "types": "./dist/index.d.ts",
+  "readme": "README.md",
+  "exports": {
+    ".": {
+      "import": "./dist/rollup-plugin-module-fallback.js",
+      "require": "./dist/rollup-plugin-module-fallback.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vite": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-plugin-dts": "^2.2.0"
+  }
+}
