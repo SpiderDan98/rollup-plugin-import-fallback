@@ -1,7 +1,7 @@
 import { Plugin } from "vite";
 
-const moduleFallback = ({ parameterName = "f" } = {}): Plugin => ({
-  name: "module-fallback",
+const importFallback = ({ parameterName = "f" } = {}): Plugin => ({
+  name: "import-fallback",
   enforce: "pre",
   // @ts-ignore
   async resolveId(id, importer, options) {
@@ -20,4 +20,4 @@ const moduleFallback = ({ parameterName = "f" } = {}): Plugin => ({
   },
 });
 
-export default moduleFallback;
+export default importFallback;

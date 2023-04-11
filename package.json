@@ -1,8 +1,8 @@
 {
-  "name": "rollup-plugin-module-fallback",
+  "name": "rollup-plugin-import-fallback",
   "type": "module",
   "version": "1.0.0",
-  "description": "A rollup/vite plugin that allows to define a module fallback.",
+  "description": "A rollup/vite plugin that allows to define a import fallback.",
   "files": [
     "dist"
   ],
@@ -17,14 +17,14 @@
     "typescript"
   ],
   "author": "Daniel Kemna <danielkemna@t-online.de>",
-  "main": "./dist/rollup-plugin-module-fallback.umd.cjs",
-  "module": "./dist/rollup-plugin-module-fallback.js",
+  "main": "./dist/rollup-plugin-import-fallback.umd.cjs",
+  "module": "./dist/rollup-plugin-import-fallback.js",
   "types": "./dist/index.d.ts",
   "readme": "README.md",
   "exports": {
     ".": {
-      "import": "./dist/rollup-plugin-module-fallback.js",
-      "require": "./dist/rollup-plugin-module-fallback.umd.cjs"
+      "import": "./dist/rollup-plugin-import-fallback.js",
+      "require": "./dist/rollup-plugin-import-fallback.umd.cjs"
     }
   },
   "scripts": {

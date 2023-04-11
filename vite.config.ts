@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "RollupPluginModuleFallback",
-      fileName: "rollup-plugin-module-fallback",
+      name: "RollupPluginImportFallback",
+      fileName: "rollup-plugin-import-fallback",
     },
   },
   resolve: {

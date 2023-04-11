@@ -1,3 +1,3 @@
-import moduleFallback from "@/plugin";
+import importFallback from "@/plugin";
 
-export default moduleFallback;
+export default importFallback;

@@ -1,11 +1,11 @@
-# rollup-plugin-module-fallback
+# rollup-plugin-import-fallback
 
 A rollup plugin that creates virtual files for your custom Tailwind configuration.
 
 ## Install
 
 ```bash
-yarn add -D rollup-plugin-module-fallback
+yarn add -D rollup-plugin-import-fallback
 ```
 
 ## Usage with vite
@@ -14,11 +14,11 @@ In `vite.config.ts`
 
 ```ts
 import { defineConfig } from "vite";
-import moduleFallback from "rollup-plugin-module-fallback";
+import importFallback from "rollup-plugin-import-fallback";
 
 export default defineConfig({
   plugins: [
-    moduleFallback({
+    importFallback({
       parameterName: "fallback", // Default f
     }),
   ],
@@ -28,9 +28,9 @@ export default defineConfig({
 In your code:
 
 ```ts
-import module, {
-  namedModuleExport,
-} from "./a-module-or-file-that-is-not-always-defined?f=./a-fallback-module-or-file";
+import import, {
+  namedImport,
+} from "./a-import-that-is-not-always-defined?f=./a-fallback-import";
 ```
 
 ## Typescript
@@ -38,9 +38,9 @@ import module, {
 You must define the correct import types in your declaration file.
 
 ```ts
-declare module "./a-module-or-file-that-is-not-always-defined?f=./a-fallback-module";
+declare module "./a-import-that-is-not-always-defined?f=./a-fallback-import";
 ```
 
 ## Bundle size
 
-The final bundle contains only the module actually used to minimise bundle size.
+The final bundle contains only the import that is actually used, to minimise bundle size.
