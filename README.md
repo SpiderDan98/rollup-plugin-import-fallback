@@ -1,6 +1,6 @@
 # rollup-plugin-import-fallback
 
-A rollup plugin that creates virtual files for your custom Tailwind configuration.
+A rollup/vite plugin that allows to define a import fallback.
 
 ## Install
 
